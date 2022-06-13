@@ -8,6 +8,7 @@ h1 {
 	text-align: center;
 }
 
+/* Begin hovering book display */
 .container {
 	width:80%;
 	padding: 20px;
@@ -39,3 +40,25 @@ h1 {
 	width: 150px;
 	height: auto;
 } */
+
+/* End hovering book display */
+
+/* Begin sign-up | Using https://codepen.io/callmenick/pen/OxpKNZ */
+
+.signup {
+	text-align: center;
+	color: white;
+	background-color: blueviolet;
+	margin: 250px;
+	margin-top: auto;
+	padding: 75px;
+	border-radius: 200px;
+}
+
+.input-text {
+	width: 600px;
+	padding: 15px 5px;
+	border-radius: 25px;
+}
+
+
