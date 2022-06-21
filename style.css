@@ -9,7 +9,7 @@ h1 {
 }
 
 /* Begin hovering book display */
-.container {
+.featured-books {
 	width:80%;
 	padding: 20px;
 	margin: 100px auto;
@@ -44,7 +44,6 @@ h1 {
 /* End hovering book display */
 
 /* Begin sign-up | Using https://codepen.io/callmenick/pen/OxpKNZ */
-
 .signup {
 	text-align: center;
 	color: white;
@@ -52,13 +51,16 @@ h1 {
 	margin: 250px;
 	margin-top: auto;
 	padding: 75px;
-	border-radius: 200px;
+	/* border-radius: 200px; */
 }
 
-.input-text {
+.input {
 	width: 600px;
-	padding: 15px 5px;
-	border-radius: 25px;
+	height: 44px;
+	/* border-radius: 25px; */
 }
 
-
+/* Start of submit email button */
+.submit-email {
+	height: 50px;
+}
