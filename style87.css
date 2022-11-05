@@ -1,0 +1,573 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0%;
+    border: 0%;
+    margin: 0%;
+}
+
+#background-image {
+    background-image: linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),url("library14.jpg");
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	background-size: cover;
+	padding-bottom: 2%;
+}
+
+#logo {
+    width: 15%;
+    margin-left: 42.5%;
+}
+
+/* Start signup box */
+#mc_embed_signup {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 3%;
+    background-color: white;
+    /* border: 1px solid rgb(190, 190, 190); */
+    border-radius: 1vh;
+}
+
+#signup-container {
+    padding-right: 3%;
+}
+
+#mc-embedded-subscribe-form {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+#mce-EMAIL {
+	font-weight: bold;
+    margin-bottom: 2%;
+}
+/* End signup box */
+
+
+#current-book {
+    text-align: center;
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 25%;
+    padding-bottom: 3%;
+}
+
+#current {
+    display: inline-block;
+    width: 30%;
+	float: left;
+	margin-right: 2%;
+    /* vertical-align: bottom; */
+	border-radius: 0.5vh;
+}
+
+#overview {
+    display: inline-block;
+    text-align: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    vertical-align: top;
+    width: 60%;
+    height: 100%;
+    padding-right: 1%;
+	padding-bottom: 1%;
+    /* margin-left: 2%; */
+    border-radius: 0.5vh;
+}
+
+h3 {
+    padding-top: 1%;
+	color: #5A4AE3;
+}
+
+#overview-text {
+    text-align: left;
+	padding-left: 2%;
+}
+
+/* Start tabs */
+#tab-div {
+	text-align: center;
+	width: 45vw;
+	margin-left: 27.5%;
+}
+
+.section {
+	display: none;
+	border-top: 1px solid #ddd;
+  }
+  
+.tab-input {
+	display: none;
+}
+
+.tabs {
+	display: inline-block;
+	margin: 0 0 -1px;
+	/* margin-top: 0.125%; */
+	padding: 2% 15%;
+	/* font-weight: 600; */
+	font-size: 1.25rem;
+	text-align: center;
+	color: #bbb;
+	border: 1px solid transparent;
+  }
+  
+  .tabs:before {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: normal;
+	margin-right: 10px;
+  }
+  
+  .tabs:hover {
+	color: #888;
+	cursor: pointer;
+  }
+  
+  /* .tab-input:checked + .tabs {
+	color: #5A4AE3;
+	border: 1px solid #ddd;
+	border-top: 4.5px solid #5A4AE3;
+	border-bottom: 1px solid #fff;
+  } */
+
+  #tab1:checked + .tabs {
+	color: #5A4AE3;
+	border: 1px solid #ddd;
+	border-top: 4.5px solid #5A4AE3;
+	border-bottom: 1px solid #fff;
+  }
+
+  #tab2:checked + .tabs {
+	color: #5A4AE3;
+	border: 1px solid #ddd;
+	border-top: 4.5px solid #5A4AE3;
+	border-bottom: 1px solid #fff;
+  }
+  
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2 {
+	display: block;
+  }
+
+  .instructions {
+	justify-content: center;
+	/* width: 30vw;
+	margin-left: 25vw; */
+	font-size: 1.5rem;
+	text-align: center;
+	color: black;
+	padding: 1.5vh;
+	background-color: white;
+	border-radius: 2vh;
+	margin-bottom: 1%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#instructions-text {
+	text-align: left;
+}
+
+.why {
+	justify-content: center;
+	/* width: 30vw; */
+	/* margin-left: 25vw; */
+	margin-bottom: 2%;
+	font-size: 1.5rem;
+	text-align: center;
+	color: black;
+	padding: 0.5%;
+	/* border-radius: 2vh;
+	box-shadow: 0 10px 20px 5px rgba(0, 0, 0, .3); */
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#why-text {
+	text-align: left;
+}
+
+.graphic-div {
+	display: flex;
+	justify-content: center;
+	padding: 0%;
+	padding-top: 5%;
+	margin: 0%;
+	border: none;
+	width: 100%;
+}
+
+.phone-graphic {
+	width: 40%;
+}
+
+.brain-graphic {
+	width: 75%;
+	padding-bottom: 10%;
+}
+/* End tabs */
+
+/* 1142 - tabs,  1306 - signup*/
+/* Start small browser design */
+@media only screen and (max-width: 1820px) and (min-width: 1450px) {
+	.tabs {
+		width: 40%;
+		padding: 3%;
+		font-size: 1.25rem;
+	  }
+}
+
+@media only screen and (max-width: 1449px) and (min-width: 961px) {
+	#logo {
+		width: 20%;
+		margin-left: 40%;
+	}
+
+	#mc_embed_signup {
+		width: 70%;
+		text-align: center;
+		margin-left: 15%;
+		margin-top: 5%;
+		
+	}
+
+	#tab-div {
+		text-align: center;
+		width: 60vw;
+		margin-left: 20%;
+	}
+
+	.tabs {
+		width: 40%;
+		padding: 3%;
+		font-size: 1.25rem;
+	  }
+
+	  #current-book {
+		width: 70%;
+		margin-top: 5%;
+		margin-left: 15%;
+		padding-bottom: 5%;
+	}
+}
+/* End small browser design */
+
+/* Start phone design */
+@media only screen and (max-width: 480px) and (min-width: 393px) {
+	#logo {
+		width: 50%;
+		margin-left: 25%;
+	}
+
+
+	/* Start signup */
+	#mc_embed_signup {
+		width: 100%;
+		text-align: center;
+		margin-left: 0%;
+		margin-top: 5%;
+		border-radius: 0vh;
+	}
+
+	#signup-container {
+		padding-right: 0%;
+	}
+
+	#mc-embedded-subscribe-form {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	#h2 {
+		font-size: 1rem;
+	}
+
+	#mce-EMAIL {
+		font-weight: bold;
+		margin-bottom: 2%;
+	}
+	/* End signup */
+
+
+	#current-book {
+		width: 100%;
+		margin-top: 5%;
+		margin-left: 0%;
+		padding-bottom: 5%;
+	}
+	
+	#current {
+		width: 40%;
+	}
+	
+	#overview {
+		background-color: rgba(255, 255, 255, 0.85);
+		width: 80%;
+		font-size: 0.85rem;
+	}
+
+
+	/* Start tabs */
+	#tab-div {
+		width: 100vw;
+		margin-left: 0%;
+	}
+	
+	.tabs {
+		width: 42%;
+		padding: 3%;
+		font-size: 1rem;
+	  }
+
+	  .instructions {
+		font-size: 1.25rem;
+		padding: 10%;
+	
+	}
+	
+	.why {
+		font-size: 1.25rem;
+		padding: 10%;
+	}
+	
+	.phone-graphic {
+		width: 100%;
+	}
+	
+	.brain-graphic {
+		width: 100%;
+	}
+	/* End tabs */
+}
+/* End phone design */
+
+@media only screen and (max-width: 392px) {
+
+	#logo {
+		width: 50%;
+		margin-left: 25%;
+	}
+
+
+	/* Start signup */
+	#mc_embed_signup {
+		width: 100%;
+		text-align: center;
+		font-size: 0.75rem;
+		margin-left: 0%;
+		margin-top: 5%;
+		border-radius: 0vh;
+	}
+
+	#signup-container {
+		padding-right: 0%;
+	}
+
+	#mc-embedded-subscribe-form {
+		padding-left: 2%;
+		padding-right: 2%;
+	}
+
+	#h2 {
+		font-size: 1rem;
+	}
+
+	#mce-EMAIL {
+		font-weight: bold;
+		margin-bottom: 2%;
+	}
+	/* End signup */
+
+
+	#current-book {
+		width: 100%;
+		margin-top: 5%;
+		margin-left: 0%;
+		padding-bottom: 5%;
+	}
+	
+	#current {
+		width: 40%;
+	}
+	
+	#overview {
+		background-color: rgba(255, 255, 255, 0.85);
+		width: 80%;
+		font-size: 0.85rem;
+	}
+
+
+	/* Start tabs */
+	#tab-div {
+		width: 100vw;
+		margin-left: 0%;
+	}
+	
+	.tabs {
+		width: 40%;
+		padding: 3%;
+		font-size: 0.80rem;
+	  }
+
+	  .instructions {
+		font-size: 1.25rem;
+		padding: 10%;
+	
+	}
+	
+	.why {
+		font-size: 1.25rem;
+		padding: 10%;
+	}
+	
+	.phone-graphic {
+		width: 100%;
+	}
+	
+	.brain-graphic {
+		width: 100%;
+	}
+	/* End tabs */
+}
+
+
+/* Start tablet design */
+@media only screen and (max-width: 960px) and (min-width: 650px) {
+	#logo {
+		width: 30%;
+		margin-left: 35%;
+	}
+
+
+	/* Start signup */
+	#mc_embed_signup {
+		width: 80%;
+		text-align: center;
+		margin-left: 10%;
+		margin-top: 5%;
+		border-radius: 1vh;
+	}
+	/* End signup */
+
+	#current-book {
+		width: 100%;
+		margin-top: 5%;
+		margin-left: 0%;
+		padding-bottom: 5%;
+	}
+	
+	#current {
+		width: 30%;
+	}
+
+	#overview {
+		background-color: rgba(255, 255, 255, 0.85);
+		width: 60%;
+		font-size: 1rem;
+	}
+
+	/* Start tabs */
+	#tab-div {
+		width: 100vw;
+		margin-left: 0%;
+	}
+	
+	.tabs {
+		width: 42%;
+		padding: 3%;
+		font-size: 1.2rem;
+	  }
+
+	  .instructions {
+		font-size: 1.25rem;
+		padding: 10%;
+	
+	}
+	
+	.why {
+		font-size: 1.25rem;
+		padding: 10%;
+	}
+	
+	.phone-graphic {
+		width: 50%;
+	}
+	
+	.brain-graphic {
+		width: 100%;
+	}
+	/* End tabs */
+}
+
+
+@media only screen and (max-width: 650px) and (min-width: 481px) {
+	#logo {
+		width: 30%;
+		margin-left: 35%;
+	}
+
+
+	/* Start signup */
+	#mc_embed_signup {
+		width: 80%;
+		text-align: center;
+		margin-left: 10%;
+		margin-top: 5%;
+		border-radius: 1vh;
+	}
+	/* End signup */
+
+	#current-book {
+		width: 100%;
+		margin-top: 5%;
+		margin-left: 0%;
+		padding-bottom: 5%;
+	}
+	
+	#current {
+		width: 45%;
+	}
+
+	#overview {
+		background-color: rgba(255, 255, 255, 0.85);
+		width: 60%;
+		font-size: 1rem;
+	}
+
+	/* Start tabs */
+	#tab-div {
+		width: 100vw;
+		margin-left: 0%;
+	}
+	
+	.tabs {
+		width: 42%;
+		padding: 3%;
+		font-size: 1.2rem;
+	  }
+
+	  .instructions {
+		font-size: 1.25rem;
+		padding: 10%;
+	
+	}
+	
+	.why {
+		font-size: 1.25rem;
+		padding: 10%;
+	}
+	
+	.phone-graphic {
+		width: 70%;
+	}
+	
+	.brain-graphic {
+		width: 100%;
+	}
+	/* End tabs */
+}

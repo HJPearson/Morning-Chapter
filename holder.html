@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="holder.css">
+	<head>
+		<link rel="icon" href="MCLogoIcon.png">
+		<!-- Line below is related to the Mailchimp form -->
+		<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1"/> <!-- Formats accordingly for whatever device is being used -->
+		<title>Morning Chapter</title>
+		<meta name="description" content="Start every morning by learning the best lessons from the most influential books of our time. Simply choose a book, enter your email address, and then you'll recieve one email every morning that contains the important information from one to three chapters of the book, until it's finished.">
+	</head>
+	<!-- Put logo in the tab bar. Use this site for instructions https://stackoverflow.com/questions/11488960/how-do-i-put-my-websites-logo-to-be-the-icon-image-in-browser-tabs -->
+	<body>
+		<!-- Will likely turn line below into navbar at some point. Probably when we have too many books for one page -->
+		<div id="bg">
+			<div class="logo">
+				<img src="LogoPurple.png" alt="Morning Chapter" class="img-logo">
+			</div>
+			<div id="headsDiv">
+				<br>
+				<header class="heads">Start every morning by learning the best lessons from the most influential books of our time <b style="color:#5A4AE3; background-color: white; border-radius: 0.5vh;">in 5 minutes or less</b></header>
+			</div>
+			<h1>Choose a book</h1>
+			
+			<div class="overview">
+				<div id="featured1" style="display: none;">
+					<div id="featured-header-1" class="overview-headers">
+						<div class="close-div">
+							<!-- <span class="close">x</span> -->
+							<button class="close" onclick="closeOverview()">x</button>
+						</div>
+						How to Win Friends and Influence People - Dale Carnegie
+					</div>
+					<div id="featured1-1" class="more-info1">
+						<p style="display: inline;">It's a well known fact that the majority of career success comes from your ability to deal with people, not just from having technical know-how. That's why <i><b>How to Win Friends and Influence People</b></i> has sold millions of copies and become a staple for the world's most successful people. <br><br>Though this book was made popular as a way to succeed in business, its principles are just as applicable to your personal life. This</p><p style="color: #5A4AE3; display: inline; font-weight: bold;"> Morning Chapter </p> <p style="display:inline;">selection will teach you: <b><br><br>- 3 fundamentals of dealing with people<br>- 6 ways of making people like you<br>- 12 ways of winning people to your way of thinking<br>- 9 ways of changing people without offending them<br><br></b>A must read, it will give you the interpersonal skills needed to move up in your career, take on a leadership position, or maybe just make a friend or two.</p>
+						<hr style="margin-bottom: 0;">
+					</div>
+					<div id="featured1-2" class="more-info2">
+						<p>Recommended by Warren Buffet, Bill Gates, and many others</p>
+						<p>“I don't have my diploma from the University of Nebraska hanging on my office wall, and I don't have my diploma from Columbia up there either — but I do have my Dale Carnegie graduation certificate proudly displayed.”<br>- <b>Warren Buffett</b></p>
+						<hr>
+						<p>We, of course, want you to sign up for Morning Chapter, but we also support authors and understand the value of reading the actual book. That being said, we will leave a link for you to <a href="https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034">buy the book</a>, as we highly recommend doing so.</p>
+					</div>
+				</div>
+				<div id="featured2" style="display: none;">
+					<div id="featured-header-2" class="overview-headers">
+						<div class="close-div">
+							<button class="close" onclick="closeOverview()">x</button>
+						</div>
+						Rich Dad Poor Dad - Robert Kiyosaki
+					</div>
+					<div id="featured2-1" class="more-info1">
+						<p> Stuff</p>
+						<hr>
+					</div>
+					<div id="featured2-2" class="more-info2">
+						<p> More stuff</p>
+					</div>
+				</div>
+			</div>
+				
+			<div class="featured-books">
+				<label id="friends" class="books">
+					<!-- The style makes it to where the actual radio button is hidden -->
+					<input type="radio" class="radioButtons" name="signup" style="opacity:0; height: 0; width: 0; position: absolute;">
+					<!-- onclick="select('featured1','6665443', 'How to Win Friends and Influence People')" -->
+					<img src="friends.jpeg" id="friends-img" alt="How to Win Friends and Influence People" class="images" onclick="select('featured1','6665443', 'How to Win Friends and Influence People')">
+				</label>
+				<label class="books">
+					<input id="gogiverR" type="radio" class="radioButtons" name="signup" style="opacity:0; height: 0; width: 0; position: absolute;">
+					<!-- onclick="select('featured2', '6665471', 'Rich Dad Poor Dad')" -->
+					<img src="richdadpoordad.png" id="rich-img" alt="Rich Dad Poor Dad" class="images" onclick="select('featured2', '6665471', 'Rich Dad Poor Dad')">
+				</label>
+			</div>
+			
+			<!-- <div id="deselect">
+				<button onclick="uncheckFunction()" id="uncheck">Reset Selection</button>
+			</div> -->
+			<!-- Underneath book selection, give a very brief overview of book (author, summary) and maybe some comments from people who have read it (e.g. Bill Gates) -->
+			
+			<!-- Begin Mailchimp Signup Form -->
+			<div id="deselect" style="padding-bottom: 2%;">
+				<div id="mc_embed_signup">
+					<form action="https://morningchapter.us13.list-manage.com/subscribe/post?u=dc80809ce74a0f259cc46a177&amp;id=1b3730d610" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div id="mc_embed_signup_scroll">
+						<h2 style="display: inline;">Receive a daily</h2> <h2 style="color: #5A4AE3; display: inline;">Morning Chapter</h2> <h2 style="display: inline;">for</h2> <h2 style="color: #5A4AE3; display: inline;" id="book-title">...</h2>
+					<div class="mc-field-group">
+						<input type="email" value="" name="EMAIL" class="required-email" id="mce-EMAIL" placeholder="Enter your email address here">
+					</div>
+					<div hidden="true"><input type="hidden" name="tags" value=""></div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_dc80809ce74a0f259cc46a177_1b3730d610" tabindex="-1" value=""></div>
+						<div class="clear">
+							<input type="submit" value="Try it out" name="subscribe" id="mc-embedded-subscribe" class="button" disabled="true" style="background-color:#5A4AE3;">
+							<div id="free"><p id="free-text">(Don't worry, it's always 100% free, and you can unsubscribe at any time)</p></div>
+						</div>
+						</div>
+					</form>
+				</div>
+				<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+				<!--End mc_embed_signup-->
+			</div>
+		</div>
+		
+		<div id="tab-div">
+			<input class="tab-input" id="tab1" type="radio" name="tabs" checked>
+			<label class="tabs" for="tab1">How it works</label>
+		
+			<input class="tab-input" id="tab2" type="radio" name="tabs">
+			<label class="tabs" for="tab2">Why Morning Chapter?</label>
+		
+
+			<section class="section" id="content1">
+				<div class="instructions">
+					<h3 style="color:#5A4AE3; font-family: 'Source Sans Pro', sans-serif;">How it works</h3>
+					<!-- <p>Once you select a book and enter your email address, you will recieve a concise and easy-to-read email overview of the most important points from the book of your choice, one chapter at a time.
+						For example, if a book has 30 chapters, you will recieve a daily email for 30 days in a row, one for each chapter. Once you have finished the book, the emails stop, giving you the option to choose another book if you'd like.
+						If you decide that you don't like a particular book, you can opt out of the emails at any time!</p> -->
+						<p><b style="color:#5A4AE3">1.)</b><b> Choose a book</b></p>
+						<p><b style="color:#5A4AE3">2.)</b><b> Enter your email address</b></p>
+						<p><b>That's it! You'll then recieve <b style="color:#5A4AE3">one email every morning</b>, each containing the knowledge from 1 to 3 chapters of the book until it's finished.</b></p>
+						<p><b>All it takes is <b style="color:#5A4AE3">5 minutes or less</b> each morning to read our <b style="color:#5A4AE3">concise</b> and <b style="color:#5A4AE3">entertaining</b> emails that will give you the knowledge you need to be successful.</b></p>
+						<p><b>And don't worry, <b style="color:#5A4AE3">it's 100% free</b> and, if you don't like the book, <b style="color:#5A4AE3">you can unsubscribe at any time.</b> So, that raises the question, 
+							<b style="color:#5A4AE3;">why would you NOT give it a try?</b></b></p>
+
+						<div class="graphic-div"><img src="Phone-NoBG.png" alt="Phone" class="phone-graphic"></div>
+				</div>
+			</section>
+
+			<section class="section" id="content2">
+				<div class="why">
+					<h4 style="color:#5A4AE3; font-family: 'Source Sans Pro', sans-serif;">Why Morning Chapter?</h4>
+					<p><b>
+						Books bring immense value to your life by equipping you with the knowledge you need to be <b style="color:#5A4AE3">successful</b>, but many people don't feel like they have the time to dedicate towards reading them. So, we at <b style="color:#5A4AE3">Morning Chapter</b> have set out to make
+						it <b style="color:#5A4AE3">easier</b> and <b style="color:#5A4AE3">more fun</b> for you to learn the important lessons that books have to offer. And what's easier than having those lessons automatically sent to your inbox every 
+						morning in <b style="color:#5A4AE3">concise</b>, <b style="color:#5A4AE3">easy to read</b>, and <b style="color:#5A4AE3">meme-filled</b> emails? Save your valuable time for your family, friends, and hobbies by streamlining 
+						your learning with <b style="color:#5A4AE3">Morning Chapter</b>. Oh, and the best part: <b style="color:#5A4AE3">it's 100% free.</b> <br><br>Learning has never been easier.
+						</b>
+					<div class="graphic-div"><img src="Graphic-NoBG1.png" alt="Brain" class="brain-graphic"></div>
+				</div>
+			</section>
+		</div>
+
+		<!-- Possibly input a form for people to submit book requests -->
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="script87.js"></script>
+	</body>
+</html>
+
+
+<!-- Possibly input a form for people to submit book requests -->
+
+
+<!-- 
+
+From instructions:	
+<p><b style="color:#5A4AE3">1.) </b>Choose a book</p>
+<p><b style="color:#5A4AE3">2.)</b> Enter your email address</p>
+<div id="instructions-text">
+	<p>That's it! You'll then recieve <b style="color:#5A4AE3">one email every morning</b>, each containing the knowledge from 1 to 3 chapters of the book until it's finished.</p>
+	<p>All it takes is <b style="color:#5A4AE3">5 minutes or less</b> each morning to read our <b style="color:#5A4AE3">concise</b> and <b style="color:#5A4AE3">entertaining</b> emails that will give you the knowledge you need to be successful.</p>
+	<p>And don't worry, <b style="color:#5A4AE3">it's 100% free</b> and, if you don't like the book, <b style="color:#5A4AE3">you can unsubscribe at any time.</b> So, that raises the question, 
+	<b style="color:#5A4AE3;">why would you not give it a try?</b></b></p>
+</div>
+
+
+Tags:
+How to Win Friends and Influence People - 6665443
+Rich Dad Poor Dad - 6665471
+
+-->
+
