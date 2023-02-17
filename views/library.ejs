@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1"/> <!-- Formats accordingly for whatever device is being used -->
+		<meta name="description" content="Here's a library of our book summaries previously covered on Morning Chapter. They're free for all subscribers.">
+		<link rel="stylesheet" href="library.css">
+        <link rel="icon" href="MCLogoIcon.png"> <!-- Puts Morning Chapter logo in the tab -->
+        <script src="https://kit.fontawesome.com/107763de0d.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!-- This loads the most recent JQuery library, allowing my scrolling script to work -->
+        <script src="library.js"></script>
+        <script src="app.js"></script>
+		<title>Morning Chapter - Library</title>
+
+        <!-- Connects to Mailchimp somehow -->
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dc80809ce74a0f259cc46a177/d03d3658a86f052dd58a57c2b.js");</script>
+	</head>
+<body>
+    <div id="bg-image"></div>
+    <div id="nav">
+        <div id="home-div">
+            <img src="return.png" alt="Home" id="return" onclick="home()">
+        </div>
+        <img src="LogoPurple.png" alt="Morning Chapter" id="logo">
+        <p id="login-status">Logged in as: <b><%= email %></b></p>
+    </div>
+    
+    <div id="heading-wrapper">
+        <div id="heading">
+            <h1>Library</h1>
+            <p>
+                The Morning Chapter library consists of all books that have previously been covered on our email list. 
+                Subscribers have unlimited access to browse through chapters and read at their own pace.
+            </p>
+        </div>
+    </div>
+    <div id="book-container">
+        <div class="books">
+            <img src="friends1.jpg" alt="How to Win Friends and Influence People" onclick="showPopup(this.id + '-popup')" id="friends">
+            <img src="bitcoins.jpeg" alt="The Basics of Bitcoins and Blockchains" onclick="showPopup(this.id + '-popup')" id="bitcoins">
+            <img src="atomic.jpg" alt="Atomic Habits" onclick="showPopup(this.id + '-popup')" id="atomic" class="coming-soon">
+        </div>
+    </div>
+
+    <!-- End sign up and validation -->
+
+    <div class="popup-container">
+        <div class="popups" id="friends-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('friends-popup')">&times;</span>
+            </div>
+            <h2>How to Win Friends and Influence People</h2>
+            <ul class="chapters">
+                <li><a href="https://mailchi.mp/2815ad90f5c0/introduction-how-to-win-friends-and-influence-people" target="_blank">Introduction</a></li>
+                <li><a href="https://mailchi.mp/8e693e48dadc/chapters-1-and-2-how-to-win-friends-and-influence-people-6261791" target="_blank">Chapters 1 & 2</a></li>
+                <li><a href="https://mailchi.mp/4eaeac4f6247/chapter-3-how-to-win-friends-and-influence-people-6261795" target="_blank">Chapter 3</a></li>
+                <li><a href="https://mailchi.mp/204f30c1aca1/chapters-4-5-and-6-how-to-win-friends-and-influence-people-6261811" target="_blank">Chapters 4, 5, & 6</a></li>
+                <li><a href="https://mailchi.mp/fe259387aec2/chapters-7-8-and-9-how-to-win-friends-and-influence-people-6261819" target="_blank">Chapters 7, 8, & 9</a></li>
+                <li><a href="https://mailchi.mp/1904514daa69/chapters-10-11-and-12-how-to-win-friends-and-influence-people-6261851" target="_blank">Chapters 10, 11, & 12</a></li>
+                <li><a href="https://mailchi.mp/2a87ef4a1c88/chapters-13-and-14-how-to-win-friends-and-influence-people-6261867" target="_blank">Chapters 13 & 14</a></li>
+                <li><a href="https://mailchi.mp/29c193cd956f/chapters-15-16-and-17-how-to-win-friends-and-influence-people-6261871" target="_blank">Chapters 15, 16, & 17</a></li>
+                <li><a href="https://mailchi.mp/d677fa6ff7ea/chapters-18-and-19-how-to-win-friends-and-influence-people-6261879" target="_blank">Chapters 18 & 19</a></li>
+                <li><a href="https://mailchi.mp/a79f5b680407/chapters-20-and-21-how-to-win-friends-and-influence-people-6261895" target="_blank">Chapters 20 & 21</a></li>
+                <li><a href="https://mailchi.mp/6539a8fd15a8/chapters-22-23-and-24-how-to-win-friends-and-influence-people-6261899" target="_blank">Chapters 22, 23, & 24</a></li>
+                <li><a href="https://mailchi.mp/aa60e384719d/chapters-24-25-and-26-how-to-win-friends-and-influence-people-6261907" target="_blank">Chapters 25, 26, & 27</a></li>
+                <li><a href="https://mailchi.mp/6d8e37970932/chapters-28-and-29-how-to-win-friends-and-influence-people-6261919" target="_blank">Chapters 28 & 29</a></li>
+                <li><a href="https://mailchi.mp/bafdfa5498db/chapter-30-how-to-win-friends-and-influence-people-6261923" target="_blank">Chapter 30</a></li>
+            </ul>
+        </div>
+        <div class="popups" id="bitcoins-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('bitcoins-popup')">&times;</span>
+            </div>
+            <h2>The Basics of Bitcoins and Blockchains</h2>
+        </div>
+        <div class="popups" id="atomic-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('atomic-popup')">&times;</span>
+            </div>
+            <h2>Atomic Habits</h2>
+            <p>This book is currently in progress on our live email list. All of its chapters will be posted here when the book is finished.</p>
+        </div>
+    </div>
+</body>
+</html>

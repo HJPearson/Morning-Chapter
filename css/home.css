@@ -1,0 +1,216 @@
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+    /* background-color: #f5f3ff; */
+    background: rgb(245,243,255);
+    background: linear-gradient(90deg, rgba(245,243,255,1) 0%, rgba(194,187,255,1) 50%, rgba(90,74,227,1) 90%);
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    /* display: flex;
+    flex-wrap: wrap; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+
+  flex-basis: 100%;
+}
+
+#info {
+  width: 600px;
+  /* padding-right: 5%; */
+}
+
+
+#logo {
+  width: 300px;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+#description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+#current-book {
+  cursor: pointer;
+}
+
+.icons {
+  width: 1.75rem;
+}
+
+#graphics {
+  width: 600px;
+  margin-left: 250px;
+}
+
+/* Begin Swiper */
+.swiper {
+  width: 85%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* width: 10%; */
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  /* height: 100%; */
+  /* object-fit: cover; */
+}
+
+.swiper-pagination {
+  height: 0.75%;
+}
+/* End Swiper */
+
+
+/* Start signup box */
+#mc_embed_signup {
+  width: 80%;
+  border-radius: 2.5vh;
+  background: transparent;
+  /* box-shadow:  5px 5px 10px rgb(0, 0, 0, 0.15),
+  -3px -3px 10px rgba(237, 234, 255, 0.75); */
+}
+
+#mc_embed_signup_scroll {
+  padding-top: 5%;
+}
+
+h2 {
+  font-size: 1rem;
+  line-height: normal;
+  font-weight: bold;
+}
+
+.mc-field-group i {
+position: absolute;
+margin-top: 0.95rem;
+margin-left: 0.75rem;
+}
+
+#mce-EMAIL {
+  font-weight: bold;
+  margin: 0%;
+  padding: 1%;
+  border: 0;
+  margin-bottom: 2%;
+  width: 83%;
+  height: 2.5rem;
+  padding-left: 2.5rem;
+  border-radius: 4vh;
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+#mc-embedded-subscribe {
+  width: 97%;
+  padding: 1%;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  padding-top: 3.5%;
+  padding-bottom: 3.5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 4vh;
+  box-shadow:  2px 2px 3px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.helper_text {
+  margin-left: 2.5%;
+  padding-bottom: 10%;
+  padding-top: 1%;
+}
+
+#mce-EMAIL-HELPERTEXT {
+  font-size: 0.8rem;
+  /* color: rgb(100, 100, 100); */
+}
+/* End signup box */
+
+
+/* Start Secondary Container */
+#secondary-container {
+  width: 100%;
+  text-align: center;
+}
+
+#library-link {
+  cursor: pointer;
+}
+
+.socials {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.socials:hover {
+  transform: scale(1.1);
+}
+
+
+/* MQ 1 */
+@media screen and (max-width: 1600px) {
+  #info {
+    width: 500px;
+  }
+
+  #graphics {
+    width: 500px;
+    margin-left: 200px
+  }
+}
+
+/* MQ 2 */
+@media screen and (max-width: 1450px) {
+  #graphics {
+    margin-left: 150px;
+
+  }
+}
+
+/* MQ 3 */
+@media screen and (max-width: 1300px) {
+  
+
+  #graphics {
+    margin-left: 75px;
+
+  }
+}

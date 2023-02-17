@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1"/> <!-- Formats accordingly for whatever device is being used -->
+		<meta name="description" content="Here's a library of our book summaries previously covered on Morning Chapter. They're free for all subscribers.">
+		<link rel="stylesheet" href="library-restricted.css">
+        <link rel="icon" href="MCLogoIcon.png"> <!-- Puts Morning Chapter logo in the tab -->
+        <script src="https://kit.fontawesome.com/107763de0d.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> <!-- This loads the most recent JQuery library, allowing my scrolling script to work -->
+        <script src="library.js"></script>
+        <script src="app.js"></script>
+		<title>Morning Chapter - Library</title>
+
+        <!-- Connects to Mailchimp somehow -->
+        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dc80809ce74a0f259cc46a177/d03d3658a86f052dd58a57c2b.js");</script>
+	</head>
+<body>
+    <div id="bg-image"></div>
+    <div id="nav">
+        <div id="home-div">
+            <img src="return.png" alt="Home" id="return" onclick="home()">
+        </div>
+        <img src="LogoPurple.png" alt="Morning Chapter" id="logo">
+    </div>
+    
+    <div id="heading-wrapper">
+        <div id="heading">
+            <h1>Library</h1>
+            <p>
+                The Morning Chapter library consists of all books that have previously been covered on our email list. 
+                Subscribers have unlimited access to browse through chapters and read at their own pace.
+                <br>
+                <br>
+                Enter your email address to log in and start reading.
+            </p>
+        </div>     
+    </div>
+
+    <!-- Message to subscriber -->
+    
+    <% if (message.length > 0) { %>
+        <div class="alert-container">
+            <div class="alert alert-unsubscribed"><%= message %></div>
+        </div>
+      <% } %>
+    
+    <!-- Start sign up and login for library access -->  
+    <form action="/library-restricted" method="POST" id="validate-subscriber">
+        <input type="email" name="email" class="email-input" placeholder="Enter your email address here" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        <input type="submit" value="Log In" class="email-input-button">
+    </form>
+    <div id="book-container">
+        <div class="books">
+            <img src="friends1.jpg" alt="How to Win Friends and Influence People" onclick="showPopup(this.id + '-popup')" id="friends">
+            <img src="bitcoins.jpeg" alt="The Basics of Bitcoins and Blockchains" onclick="showPopup(this.id + '-popup')" id="bitcoins">
+            <img src="atomic.jpg" alt="Atomic Habits" onclick="showPopup(this.id + '-popup')" id="atomic" class="coming-soon">
+        </div>
+    </div>    
+
+    <!-- End sign up and validation -->
+
+    <div class="popup-container">
+        <div class="popups" id="friends-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('friends-popup')">&times;</span>
+            </div>
+            <h2>How to Win Friends and Influence People</h2>
+            <ul class="chapters">
+                <li>Introduction</li>
+                <li>Chapters 1 & 2</li>
+                <li>Chapter 3</li>
+                <li>Chapters 4, 5, & 6</li>
+                <li>Chapters 7, 8, & 9</li>
+                <li>Chapters 10, 11, & 12</li>
+                <li>Chapters 13 & 14</li>
+                <li>Chapters 15, 16, & 17</li>
+                <li>Chapters 18 & 19</li>
+                <li>Chapters 20 & 21</li>
+                <li>Chapters 22, 23, & 24</li>
+                <li>Chapters 25, 26, & 27</li>
+                <li>Chapters 28 & 29</li>
+                <li>Chapter 30</li>
+            </ul>
+            <p><b>Subscribe or log in to unlock the book</b></p>
+        </div>
+        <div class="popups" id="bitcoins-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('bitcoins-popup')">&times;</span>
+            </div>
+            <h2>The Basics of Bitcoins and Blockchains</h2>
+        </div>
+        <div class="popups" id="atomic-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('atomic-popup')">&times;</span>
+            </div>
+            <h2>Atomic Habits</h2>
+            <p>This book is currently in progress on our live email list. All of its chapters will be posted here when the book is finished.</p>
+        </div>
+    </div>
+</body>
+</html>
