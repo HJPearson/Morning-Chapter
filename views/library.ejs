@@ -18,21 +18,13 @@
 <body>
     <div id="bg-image"></div>
     <div id="nav">
-        <div id="home-div">
-            <img src="return.png" alt="Home" id="return" onclick="home()">
-        </div>
-        <img src="LogoPurple.png" alt="Morning Chapter" id="logo">
+        <a href="/" id="logo-link">
+            <img src="MCLogoIcon.svg" alt="Morning Chapter" id="logo">
+        </a>
+        <h1>Library</h1>
         <p id="login-status">Logged in as: <b><%= email %></b></p>
     </div>
     
-    <div id="heading-wrapper">
-        <div id="heading">
-            <h1>Library</h1>
-            <p>
-                The Morning Chapter library consists of all books that have previously been covered on our email list. 
-                Subscribers have unlimited access to browse through chapters and read at their own pace.
-            </p>
-        </div>
     </div>
     <div id="book-container">
         <div class="books">

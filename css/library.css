@@ -1,53 +1,38 @@
 body {
-    background-color: #f5f3ff;
+    background: linear-gradient(180deg, rgba(245,243,255,1) 25%, rgba(184,175,255,1) 60%, rgba(90,74,227,1) 90%);
+    background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
-}
-
-#bg-image {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    /* SVG from https://coolbackgrounds.io/blue-background/ */
-    background-image: url(CornerSVG.svg); 
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top 0 right 0;
-
-    transform: rotate(180deg);
-
-    z-index: -1;
 }
 
 /* Start navbar */
 #nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 5px;
 }
 
-#home-div {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-}
-
-#return {
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-
-#return:hover {
-    transform: scale(1.2);
+#logo-link {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 2%;
 }
 
 #logo {
-    width: 20rem;
+    width: 60px;
+    align-self: center;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-#login-status {
-    position: absolute;
-    top: 2%;
-    right: 2%;
+#logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    color: #5a4ae3;
 }
 /* End navbar */
 

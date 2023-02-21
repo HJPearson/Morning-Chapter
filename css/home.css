@@ -7,34 +7,31 @@ html {
 body {
     /* background-color: #f5f3ff; */
     background: rgb(245,243,255);
-    background: linear-gradient(90deg, rgba(245,243,255,1) 0%, rgba(194,187,255,1) 50%, rgba(90,74,227,1) 90%);
-
+    background: linear-gradient(90deg, rgba(245,243,255,1) 25%, rgba(184,175,255,1) 60%, rgba(90,74,227,1) 90%);
     font-family: 'Source Sans Pro', sans-serif;
-
     margin: 0;
     padding: 0;
     height: 100%;
+}
 
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* justify-content: center;
-    align-items: center; */
+#center-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
 }
 
 #main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-
-  flex-basis: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 #info {
-  width: 600px;
-  /* padding-right: 5%; */
+  width: 650px;
+  display: inline-block;
+  text-align: left;
+  padding-left: 5%;
 }
-
 
 #logo {
   width: 300px;
@@ -53,18 +50,82 @@ h1 {
   cursor: pointer;
 }
 
-.icons {
-  width: 1.75rem;
+
+
+
+/* Start signup */
+h2 {
+  font-size: 1.25rem;
 }
 
+#alert-on-list {
+  font-size: 1rem;
+  padding: 15px;
+  border-width: 1px;
+  border-color: rgb(225, 0, 0);
+  border-style: solid;
+  border-radius: 5px;
+  background-color: rgb(255, 200, 200);
+  color: rgb(225, 0, 0);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+#signup p {
+  font-size: 0.8rem;
+}
+
+#env-icon {
+  position: absolute;
+  top: 625px;
+  left: 515px;
+}
+
+#email-input {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
+  padding-left: 10px;
+}
+
+#email-input-button {
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+
+  color: white;
+  background-color: #5a4ae3;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+
+  font-weight: bold;
+}
+
+#email-input-button:hover {
+  background-color: #3b3099;
+  cursor: pointer;
+}
+
+#email-input-button:focus {
+  background-color: #3b3099;
+  cursor: pointer;
+  transform: scale(0.95);
+}
+/* End signup */
+
+
+
+
 #graphics {
-  width: 600px;
-  margin-left: 250px;
+  width: 25%;
+  padding-left: 10%;
+  display: inline-block;
 }
 
 /* Begin Swiper */
 .swiper {
-  width: 85%;
+  width: 500px;
 }
 
 .swiper-slide {
@@ -99,76 +160,9 @@ h1 {
 /* End Swiper */
 
 
-/* Start signup box */
-#mc_embed_signup {
-  width: 80%;
-  border-radius: 2.5vh;
-  background: transparent;
-  /* box-shadow:  5px 5px 10px rgb(0, 0, 0, 0.15),
-  -3px -3px 10px rgba(237, 234, 255, 0.75); */
-}
-
-#mc_embed_signup_scroll {
-  padding-top: 5%;
-}
-
-h2 {
-  font-size: 1rem;
-  line-height: normal;
-  font-weight: bold;
-}
-
-.mc-field-group i {
-position: absolute;
-margin-top: 0.95rem;
-margin-left: 0.75rem;
-}
-
-#mce-EMAIL {
-  font-weight: bold;
-  margin: 0%;
-  padding: 1%;
-  border: 0;
-  margin-bottom: 2%;
-  width: 83%;
-  height: 2.5rem;
-  padding-left: 2.5rem;
-  border-radius: 4vh;
-  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
-}
-
-#mc-embedded-subscribe {
-  width: 97%;
-  padding: 1%;
-  border: 0;
-  color: #fff;
-  font-weight: bold;
-  padding-top: 3.5%;
-  padding-bottom: 3.5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  border-radius: 4vh;
-  box-shadow:  2px 2px 3px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-}
-
-.helper_text {
-  margin-left: 2.5%;
-  padding-bottom: 10%;
-  padding-top: 1%;
-}
-
-#mce-EMAIL-HELPERTEXT {
-  font-size: 0.8rem;
-  /* color: rgb(100, 100, 100); */
-}
-/* End signup box */
-
-
 /* Start Secondary Container */
 #secondary-container {
   width: 100%;
-  text-align: center;
 }
 
 #library-link {
@@ -176,7 +170,7 @@ margin-left: 0.75rem;
 }
 
 .socials {
-  width: 2.5rem;
+  width: 40px;
   cursor: pointer;
 }
 
@@ -184,33 +178,221 @@ margin-left: 0.75rem;
   transform: scale(1.1);
 }
 
+.socials:focus {
+  transform: scale(1.1);
+}
 
 /* MQ 1 */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1450px) {
   #info {
-    width: 500px;
+    width: 600px;
   }
 
   #graphics {
-    width: 500px;
-    margin-left: 200px
+    width: 450px;
+    padding-left: 5%;
+  }
+
+  .swiper {
+    width: 100%;
   }
 }
 
 /* MQ 2 */
-@media screen and (max-width: 1450px) {
-  #graphics {
-    margin-left: 150px;
+@media screen and (max-width: 1275px) {
+  #info {
+    width: 500px;
+  }
 
+  #logo {
+    width: 250px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #graphics {
+    padding-left: 0%;
   }
 }
 
 /* MQ 3 */
-@media screen and (max-width: 1300px) {
-  
+@media screen and (max-width: 1004px) {
+  #info {
+    width: 450px;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  #description {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  #email-input {
+    width: 250px;
+  }
+
+  #signup p {
+    font-size: 0.77rem;
+  }
+
+  #secondary-container {
+    font-size: 0.9rem;
+  }
 
   #graphics {
-    margin-left: 75px;
-
+    width: 400px;
   }
 }
+
+/* MQ 4 */
+@media screen and (max-width: 899px) {
+  body {
+    display: flex;
+    background: linear-gradient(180deg, rgba(245,243,255,1) 25%, rgba(184,175,255,1) 60%, rgba(90,74,227,1) 90%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #main-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #info {
+    width: 750px;
+    padding-top: 3%;
+    padding-left: 0%;
+  }
+
+  #logo-div {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #signup {
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  #form-content {
+    display: inline-block;
+    text-align: left;
+  }
+
+  #email-input {
+    width: 350px;
+  }
+
+  #graphics {
+    width: 450px;
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+
+  #secondary-container p {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  #socials-div {
+    text-align: center;
+  }
+}
+
+/* MQ 5 */
+@media screen and (max-width: 800px) {
+  #info {
+    width: 90%;
+  }
+
+  #graphics {
+    width: 400px;
+  }
+}
+
+/* MQ 6 */
+@media screen and (max-width: 550px) {
+  #form-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  #email-input {
+    width: 75%;
+  }
+
+  #email-input-button {
+    width: 77.5%;
+    margin-top: 10px;
+    /* height: 40px; */
+    border-radius: 5px;
+    border: none;
+  }
+
+  #graphics {
+    width: 400px;
+  }
+}
+
+/* MQ 7 */
+@media screen and (max-width: 400px) {
+
+  #email-input {
+    width: 85%;
+  }
+
+  #email-input-button {
+    width: 88.5%;
+    margin-top: 10px;
+    /* height: 40px; */
+    border-radius: 5px;
+    border: none;
+  }
+
+  #graphics {
+    width: 320px;
+  }
+
+  #description {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  #signup p {
+    font-size: 0.77rem;
+  }
+
+  #secondary-container {
+    font-size: 0.9rem;
+  }
+}
+
+/* MQ 7 */
+@media screen and (max-width: 320px) {
+  #graphics {
+    width: 275px;
+  }
+}
+
+
+
+/* Test for widescreen responsiveness */
