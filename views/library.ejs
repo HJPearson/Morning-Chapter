@@ -21,16 +21,26 @@
         <a href="/" id="logo-link">
             <img src="MCLogoIcon.svg" alt="Morning Chapter" id="logo">
         </a>
-        <h1>Library</h1>
-        <p id="login-status">Logged in as: <b><%= email %></b></p>
+        <!-- <div id="h1-div">
+            <h1>Library</h1>
+        </div> -->
+        <div id="user">
+            <i class="fa-solid fa-user"></i>
+            <p><%= email %></p>
+        </div>
     </div>
     
+    <div id="h1-div">
+        <h1>Library</h1>
+    </div>
+
     </div>
     <div id="book-container">
         <div class="books">
             <img src="friends1.jpg" alt="How to Win Friends and Influence People" onclick="showPopup(this.id + '-popup')" id="friends">
             <img src="bitcoins.jpeg" alt="The Basics of Bitcoins and Blockchains" onclick="showPopup(this.id + '-popup')" id="bitcoins">
-            <img src="atomic.jpg" alt="Atomic Habits" onclick="showPopup(this.id + '-popup')" id="atomic" class="coming-soon">
+            <img src="atomic.jpg" alt="Atomic Habits" onclick="showPopup(this.id + '-popup')" id="atomic">
+            <img src="zero-to-one.jpg" alt="Zero to One" onclick="showPopup(this.id + '-popup')" id="zero" class="coming-soon">
         </div>
     </div>
 
@@ -64,12 +74,46 @@
                 <span class="close" onclick="closePopup('bitcoins-popup')">&times;</span>
             </div>
             <h2>The Basics of Bitcoins and Blockchains</h2>
+            <ul class="chapters">
+                <li><a href="https://mailchi.mp/c7250cbe830e/introduction-the-basics-of-bitcoins-and-blockchains-6264051" target="_blank">Introduction</a></li>
+                <li><a href="https://mailchi.mp/a327e291e099/what-is-money-the-basics-of-bitcoins-and-blockchains" target="_blank">What Is Money?</a></li>
+                <li><a href="https://mailchi.mp/d6c92dad2b99/cryptography-part-1-the-basics-of-bitcoins-and-blockchains" target="_blank">Cryptography Part 1</a></li>
+                <li><a href="https://mailchi.mp/b8cf6f880a5a/cryptography-part-2-the-basics-of-bitcoins-and-blockchains" target="_blank">Cryptography Part 2</a></li>
+                <li><a href="https://mailchi.mp/4de3601e1340/bitcoin-the-basics-of-bitcoins-and-blockchains" target="_blank">Bitcoin</a></li>
+                <li><a href="https://mailchi.mp/5cd3ef796f5d/blocks-and-the-bitcoin-blockchain-the-basics-of-bitcoins-and-blockchains" target="_blank">Blocks and the Bitcoin Blockchain</a></li>
+                <li><a href="https://mailchi.mp/d1267df13ea0/bitcoin-mining-the-basics-of-bitcoins-and-blockchains" target="_blank">Bitcoin Mining</a></li>
+                <li><a href="https://mailchi.mp/61a991679c95/ethereum-the-basics-of-bitcoins-and-blockchains" target="_blank">Ethereuem</a></li>
+                <li><a href="https://mailchi.mp/ebaef51e69ba/smart-contracts-and-dapps-the-basics-of-bitcoins-and-blockchains" target="_blank">Smart Contracts and dApps</a></li>
+                <li><a href="https://mailchi.mp/f92da8d89440/digital-tokens-the-basics-of-bitcoins-and-blockchains" target="_blank">Digital Tokens</a></li>
+                <li><a href="https://mailchi.mp/c762d1bfef76/blockchain-technology-the-basics-of-bitcoins-and-blockchains-6264059" target="_blank">Blockchain Technology</a></li>
+                <li><a href="https://mailchi.mp/4259ba462b46/investing-the-basics-of-bitcoins-and-blockchains-6264063" target="_blank">Investing</a></li>
+            </ul>
         </div>
         <div class="popups" id="atomic-popup">
             <div class="close-container">
                 <span class="close" onclick="closePopup('atomic-popup')">&times;</span>
             </div>
             <h2>Atomic Habits</h2>
+            <ul class="chapters">
+                <li><a href="https://mailchi.mp/c97d85b3b3da/introduction-atomic-habits" target="_blank">Introduction</a></li>
+                <li><a href="https://mailchi.mp/aaade30a93f9/the-fundamentals-atomic-habits-6264071" target="_blank">The Fundamentals Part 1</a></li>
+                <li><a href="https://mailchi.mp/c2de4dcf9a85/the-fundamentals-of-habits-part-2-atomic-habits-6264075" target="_blank">The Fundamentals Part 2</a></li>
+                <li><a href="https://mailchi.mp/6bffc9fffa5c/make-it-obvious-part-1-atomic-habits" target="_blank">Make It Obvious Part 1</a></li>
+                <li><a href="https://mailchi.mp/14e45ebe507a/make-it-obvious-part-2-atomic-habits" target="_blank">Make It Obvious Part 2</a></li>
+                <li><a href="https://mailchi.mp/7599d903bc30/making-it-attractive-part-1-atomic-habits" target="_blank">Make It Attractive Part 1</a></li>
+                <li><a href="https://mailchi.mp/065e74aad5e1/making-it-attractive-part-2-atomic-habits" target="_blank">Make It Attractive Part 2</a></li>
+                <li><a href="https://mailchi.mp/c05fd27db858/make-it-easy-part-1-atomic-habits" target="_blank">Make It Easy Part 1</li>
+                <li><a href="https://mailchi.mp/e02d556e2ab4/make-it-easy-part-2-atomic-habits" target="_blank">Make It Easy Part 2</a></li>
+                <li><a href="https://mailchi.mp/ee997cbdcf58/make-it-satisfying-atomic-habits" target="_blank">Make It Satisfying</a></li>
+                <li><a href="https://mailchi.mp/e5cc523f7720/advanced-tactics-part-1-atomic-habits" target="_blank">Advanced Tactics Part 1</a></li>
+                <li><a href="https://mailchi.mp/f74cd2e6432f/advanced-tactics-part-6264083" target="_blank">Advanced Tactics Part 2</a></li>
+            </ul>
+        </div>
+        <div class="popups" id="zero-popup">
+            <div class="close-container">
+                <span class="close" onclick="closePopup('zero-popup')">&times;</span>
+            </div>
+            <h2>Zero to One</h2>
             <p>This book is currently in progress on our live email list. All of its chapters will be posted here when the book is finished.</p>
         </div>
     </div>

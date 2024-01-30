@@ -7,9 +7,10 @@ const path = require('path')
 const bodyParser = require('body-parser');
 const md5 = require('md5');
 const flash = require('connect-flash');
-// var cookieParser = require('cookie-parser');
 const session = require('express-session');
-const { cookie } = require('request');
+var cookieParser = require('cookie-parser');
+// const { cookie } = require('request');
+// const { redirect } = require('statuses');
 
 mailchimp.setConfig({
     apiKey: '5a3ef855536c4b4a65a72ff7dd6de6a9-us13',
@@ -38,9 +39,10 @@ async function subscribeUser(subscriberEmail, subscriberHash, req, res) {
     }
     else if (response.status == 'unsubscribed' || response.status == "archived") {
       await mailchimp.lists.updateListMember(listId, subscriberHash, {
-      status: "subscribed"
+      status: "pending"
     });
-      res.redirect('welcome');
+      req.flash('sub', "User has subscribed");  // It doesn't actually matter what the message is here. I just need something there to check if sub == 0.
+      res.redirect('/');
     }
   } 
   catch (e) {
@@ -51,9 +53,8 @@ async function subscribeUser(subscriberEmail, subscriberHash, req, res) {
       status: "pending"
     });
       console.log("Adding a completely new user");
-      // console.log(`Successfully added contact as an audience member. The contact's id is ${ sub_response.id }.`);
-      req.flash('email', `Welcome, for the first time, ${req.body.email}`);
-      res.redirect('welcome');
+      req.flash('sub', "User has subscribed");  // It doesn't actually matter what the message is here. I just need something there to check if sub == 0.
+      res.redirect('/');
     }
   }
 }
@@ -62,9 +63,9 @@ async function subscribeUser(subscriberEmail, subscriberHash, req, res) {
 async function validate(subscriberHash, req, res) {
   try {
     const response = await mailchimp.lists.getListMember(listId, subscriberHash);
-    console.log(`This user's subscription status is ${response.status}.`);
+    // console.log(`This user's subscription status is ${response.status}.`);
     if (response.status == 'subscribed') {
-      req.flash('email', req.body.email)
+      req.session.email = req.body.email;
       res.redirect('library');
     }
     else if (response.status == 'unsubscribed') {
@@ -84,32 +85,63 @@ async function validate(subscriberHash, req, res) {
   }
 }
 
+
+// This function is called when trying to access the library page from the home page. Since cookies are now being used to create lasting sessions,
+// I am now checking their subsription status each time they attempt to access the library. If they have unsubscribed since their last visit,
+// that session should be terminated and access denied. The function works exactly like 'validate', minus the error messages.
+async function authorize(subscriberHash, req, res) {
+  try {
+    const response = await mailchimp.lists.getListMember(listId, subscriberHash);
+    if (response.status == 'subscribed') {
+      res.redirect('library');
+    }
+    else if (response.status == 'unsubscribed') {
+      req.session.destroy();
+      res.redirect('/library-restricted');
+    }
+    else if (response.status == 'pending') {
+      req.session.destroy();
+      res.redirect('/library-restricted');
+    }
+  } 
+  catch (e) {
+    if (e.status === 404) {
+      req.session.destroy();
+      res.redirect('/library-restricted');
+    }
+  }
+}
+
 // App -------------------------------------------------------------------------------------
 const app = express();
 const port = process.env.PORT || 5000;
 
-// app.cookieParser(cookie('SecretString'));
 app.use(session({
-  secret: 'woodsyowllovesmorningchapter',
-  cookie: { maxAge: 60000},
+  secret: 'woodsy12qr3w5er-owl23wr4et-loves9o87-morning#%DRFt7cv8JGTubn-chapter$%T$Zrh',
   saveUninitialized: true,
-  resave: true
+  resave: false,
 }));
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(flash());
-
 app.use(express.urlencoded({ extended: false }));
-
 app.use(express.static(path.join(__dirname, '/css')));
 app.use(express.static(path.join(__dirname, '/images')));
 app.use(express.static(path.join(__dirname, '/javascript')));
 
 app.set('view engine', 'ejs');
 
+
+
+
+
 // Render the home page
 app.get('/', (req, res) => {
   const message = req.flash('message');
+  const sub = req.flash('sub');
   res.render('index', {
-    message: message
+    message: message,
+    sub: sub
   });
 });
 
@@ -120,15 +152,15 @@ app.post('/', (req, res) =>  {
   subscribeUser(userEmail, hash, req, res);
 })
 
-// Render the welcome page
-app.get('/welcome', (req, res) => {
-  const email = req.flash('email');
-  res.render('welcome', {
-    email: email
-  });
-});
+// // Render the welcome page
+// app.get('/welcome', (req, res) => {
+//   const email = req.flash('email');
+//   res.render('welcome', {
+//     email: email
+//   });
+// });
 
-// Handle form submission
+// Handle validation form submission
 app.post('/library-restricted', (req, res) => {
     let userEmail = req.body.email;
     const hash = md5(userEmail.toLowerCase());
@@ -137,13 +169,21 @@ app.post('/library-restricted', (req, res) => {
 
 // Render the restricted library
 app.get('/library-restricted', (req, res) => {
-  const message = req.flash('failure');
-  res.render('library-restricted', { message });
+  console.log(req.session.email);
+  if (req.session.email != undefined) {
+    const hash = md5(req.session.email.toLowerCase());
+    authorize(hash, req, res);
+  }
+  else {
+    const message = req.flash('failure');
+    res.render('library-restricted', { message });
+  }
 });
 
 // Render the full library
 app.get('/library', (req, res) => {
-  const email = req.flash('email');
+  const email = req.session.email;
+  console.log(req.session.email)
   res.render('library', {
     email: email
   });

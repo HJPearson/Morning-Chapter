@@ -77,8 +77,9 @@ h1 {
 }
 
 .alert-unsubscribed {
-    width: 500px;
+    width: 485px;
     font-size: 1rem;
+    font-weight: bold;
     padding: 15px;
     margin-bottom: 10px;
     border-width: 1px;
@@ -124,6 +125,11 @@ h1 {
 
 
 /* Start book display */
+
+#book-container {
+    padding-bottom: 10%;
+}
+
 .books {
     display: flex;
     flex-wrap: wrap;
@@ -157,8 +163,7 @@ h1 {
 .popup-container {
     display: flex;
     justify-content: center;
-
-    position: fixed;
+    position: absolute;
     top: 20%;
     text-align: center;
     width: 100%;
@@ -172,6 +177,12 @@ h1 {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     animation: zoom-in 0.3s;
     line-height: 2rem;
+}
+
+.popups p {
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 1.5rem;
 }
 
 @keyframes zoom-in {
@@ -195,6 +206,7 @@ h1 {
 }
 
 h2 {
+    color: #5a4ae3;
     font-size: 1rem;
     margin: 0%;
     padding-left: 5%;
@@ -207,7 +219,6 @@ h2 {
     margin: 0%;
     padding-bottom: 5%;
 }
-
 /* End popups */
 
 
@@ -229,7 +240,7 @@ h2 {
     }
     
     .alert-unsubscribed {
-        width: 85%;
+        width: 82%;
         padding-bottom: 15px;
     }
 
@@ -244,10 +255,18 @@ h2 {
     #logo {
         width: 50px;
     }
+
+    .books img {
+        width: 175px;
+    }
   }
 
   /* MQ 2 */
 @media screen and (max-width: 450px) {
+    .alert-unsubscribed {
+        width: 77%;
+        padding-bottom: 15px;
+    }
     .email-input {
         width: 80%;
     }

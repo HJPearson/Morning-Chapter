@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
+    padding-bottom: 3%;
 }
 
 #logo-link {
@@ -31,8 +32,31 @@ body {
     transform: scale(1.1);
 }
 
+#h1-div {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
 h1 {
+    font-size: 2.5rem;
+    margin: 0;
     color: #5a4ae3;
+}
+
+#user {
+    padding-right: 2%;
+    padding-top: 5px
+}
+
+.fa-solid {
+    display: inline-block;
+    color: #5a4ae3;
+}
+
+#user p {
+    display: inline-block;
+    font-weight: bold;
 }
 /* End navbar */
 
@@ -67,9 +91,10 @@ h1 {
 
 .books img {
     position: relative;
-    width: 15rem;
+    width: 200px;
     max-height: 90%;
     margin: 2%;
+    /* margin-top: 50px; */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 
     cursor: pointer;
@@ -108,52 +133,10 @@ h1 {
       }
 }
 
-.form-popups p {
-    font-weight: bold;
-    margin: 0%;
-}
-
-#validate-subscriber {
-    display: flex;
-    justify-content: center;
-    padding: 5%;
-}
-
-.email-input {
-    width: 70%;
-    height: 2rem;
-    border: none;
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    padding-left: 1rem;
-}
-
-.email-input-button {
-    height: 2rem;
-    font-weight: bold;
-    border: none;
-    color: #f5f3ff;
-    background-color: #5a4ae3;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-}
-
-.email-input-button:hover {
-    background-color: #4c3fc2;
-}
-
-.email-input-button:active {
-    transform: scale(0.98);
-}
-
 .popup-container {
     display: flex;
     justify-content: center;
-
-    position: fixed;
+    position: absolute;
     top: 20%;
     text-align: center;
     width: 100%;
@@ -167,6 +150,12 @@ h1 {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     animation: zoom-in 0.3s;
     line-height: 2rem;
+}
+
+.popups p {
+    padding-left: 5%;
+    padding-right: 5%;
+    line-height: 1.5rem;
 }
 
 @keyframes zoom-in {
@@ -190,6 +179,7 @@ h1 {
 }
 
 h2 {
+    color: #5a4ae3;
     font-size: 1rem;
     margin: 0%;
     padding-left: 5%;
@@ -202,5 +192,39 @@ h2 {
     margin: 0%;
     padding-bottom: 5%;
 }
-
 /* End popups */
+
+
+/* MQ 1 */
+@media screen and (max-width: 600px) {
+    #logo {
+        width: 50px;
+    }
+
+    #user {
+        font-size: 0.75rem;
+        padding-top: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .books img {
+        width: 175px;
+    }
+  }
+
+  /* MQ 2 */
+@media screen and (max-width: 450px) {
+    .books img {
+        width: 150px;
+    }
+  }
+
+    /* MQ 3 */
+@media screen and (max-width: 350px) {
+    .books img {
+        width: 125px;
+    }
+  }
