@@ -1,5 +1,5 @@
 # Morning-Chapter
-Website for my (no longer active) Morning Chapter email list.
+Morning Chapter was a small email-list business I ran that sent tri-weekly emails that summarized chapters from renowned books on self-help, finance/investing, and science/technology.
 
 To my knowledge, in order to run this website you will need npm and nodemon installed. The app is set to run on port 5000.
 
